@@ -19,8 +19,9 @@ Observações:
 * Assassinatos realizados pelo player <WORLD> devem ser desconsiderados.
 
 
-Bônus (Não obrigatório. Faça apenas caso se identifique com o problema ou se achar que há algo interessante a ser mostrado na solução)
+Bônus
 -----
+(Não obrigatório. Faça apenas caso se identifique com o problema ou se achar que há algo interessante a ser mostrado na solução)
 * Descobrir a arma preferida (a que mais matou) do vencedor;
 * Identificar a maior sequência de assassinatos efetuadas por um jogador (streak) sem morrer, dentro da partida;
 * Jogadores que vencerem uma partida sem morrerem devem ganhar um "award";
