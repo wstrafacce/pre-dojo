@@ -2,13 +2,10 @@ PROBLEMA
 ========
 Dado o seguinte log de um jogo de tiro em primeira pessoa:
 
-23/04/2013 15:34:22 - New match 11348965 has started
-
-23/04/2013 15:36:04 - Roman killed Nick using M16
-
-23/04/2013 15:36:33 - <WORLD> killed Nick by DROWN
-
-23/04/2013 15:39:22 - Match 11348965 has ended
+23/04/2013 15:34:22 - New match 11348965 has started  
+23/04/2013 15:36:04 - Roman killed Nick using M16  
+23/04/2013 15:36:33 - <WORLD> killed Nick by DROWN  
+23/04/2013 15:39:22 - Match 11348965 has ended  
 
 Escreva um código para
 ----------------------
