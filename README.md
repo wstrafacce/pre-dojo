@@ -13,7 +13,7 @@ Escreva um código para
 
 Observações:
 ------------
-* Assassinatos realizados pelo player <WORLD> devem ser desconsiderados.
+* Assassinatos realizados pelo player &lt;WORLD&gt; devem ser desconsiderados.
 
 
 Bônus
