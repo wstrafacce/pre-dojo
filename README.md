@@ -7,11 +7,11 @@ Dado o seguinte log de um jogo de tiro em primeira pessoa:
 23/04/2013 15:36:33 - &lt;WORLD&gt; killed Nick by DROWN  
 23/04/2013 15:39:22 - Match 11348965 has ended  
 
-Escreva um código para
-----------------------
+Resultado esperado
+------------------
 * Montar o ranking de cada partida, com a quantidade assassinatos e a quantidade de mortes de cada jogador;
 
-Observações:
+Observações
 ------------
 * Assassinatos realizados pelo player &lt;WORLD&gt; devem ser desconsiderados.
 
@@ -39,5 +39,3 @@ ENTREGA
 * Caso tenha baixado o arquivo zip, nos envie este mesmo projeto em formato compactado, com os seus fontes;
 * Se você usar o controlador de versões git, enviar a pasta .git junto com o projeto compactado;
 * Utilize o arquivo SUAS-INSTRUÇÕES.txt para adicionar algum comentário/observação que achar importante.
-
-BOA SORTE!
