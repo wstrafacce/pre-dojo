@@ -13,7 +13,7 @@ Resultado esperado
 
 Observações
 ------------
-* Assassinatos realizados pelo player &lt;WORLD&gt; devem ser desconsiderados.
+* Assassinatos realizados pelo &lt;WORLD&gt; devem ser desconsiderados, no entanto, as mortes causadas pelo &lt;WORLD&gt; devem ser consideradas para o jogador que foi morto.
 
 
 Bônus
