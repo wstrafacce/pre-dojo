@@ -35,7 +35,5 @@ SOLUÇÃO
 
 ENTREGA
 =======
-* Caso tenha feito um fork do nosso repositório, nos envie a url do seu repositório com a solução;
-* Caso tenha baixado o arquivo zip, nos envie este mesmo projeto em formato compactado, com os seus fontes;
-* Se você usar o controlador de versões git, enviar a pasta .git junto com o projeto compactado;
+* Faça um fork do nosso repositório, nos envie a url do seu repositório com a solução;
 * Utilize o arquivo SUAS-INSTRUÇÕES.txt para adicionar algum comentário/observação que achar importante.
