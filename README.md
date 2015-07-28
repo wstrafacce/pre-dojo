@@ -30,8 +30,7 @@ SOLUÇÃO
 * Seja criativo;
 * Explore ao máximo a orientação a objetos;
 * Crie testes unitários e tente usar TDD;
-* Não é necessário utilizar nenhum framework, mas fica ao seu critério;
-* Caso você tenha baixado o arquivo zip, o projeto já contém um repositório git inicializado. Se você nunca usou git desconsidere isso. 
+* Não é necessário utilizar nenhum framework, mas fica ao seu critério; 
 
 ENTREGA
 =======
