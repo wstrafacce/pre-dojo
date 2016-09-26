@@ -31,7 +31,7 @@ import br.com.cubotecnologia.web.utils.FileServerUtils;
 @Controller
 public class RankingController {
 
-	private static final Logger lgLOGGER = LoggerFactory.getLogger(RankingController.class);
+	private static final Logger LOGGER = LoggerFactory.getLogger(RankingController.class);
 
 	public IRankingBO irkbRankingBO;
 
@@ -98,7 +98,7 @@ public class RankingController {
 		} catch (Exception e) {
 			modelAndView.setViewName("view");
 			modelAndView.addObject("errorMessage", "Failed to processess log => " + e);
-			lgLOGGER.error("Failed to processess log => {}", e);
+			LOGGER.error("Failed to processess log => {}", e);
 		}
 
 		return modelAndView;

@@ -515,7 +515,7 @@
 		</dependency>
 		<dependency>
 			<groupId>br.com.cubotecnologia</groupId>
-			<artifactId>DojoBO</artifactId>
+			<artifactId>dojobo</artifactId>
 			<version>1.0.0</version>
 		</dependency>
 	</dependencies>
