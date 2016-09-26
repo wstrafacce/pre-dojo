@@ -10,37 +10,74 @@ import java.util.Map;
 import java.util.TreeMap;
 import java.util.Map.Entry;
 
+/**
+ * 
+ * @author william.s.soares
+ * 
+ *         Class to support work with maps
+ */
 public class MapUtils {
 
-	public static Map<String, Integer> sortByKey(Map<String, Integer> unsortMap) {
+	/**
+	 * Method to sort a Map of String by key values
+	 * 
+	 * @param unsortMap
+	 *            Unsort Map
+	 * @return Sort Map
+	 */
+	public static Map<String, Integer> sortByKey(final Map<String, Integer> unsortMap) {
 		return new TreeMap<String, Integer>(unsortMap);
 	}
 
-	public static Map<String, Integer> sortByValue(Map<String, Integer> unsortMap) {
+	/**
+	 * Method to sort a Map of String by Values
+	 * 
+	 * @param unsortMap
+	 *            Unsort Map
+	 * @return Sort Map
+	 */
+	public static Map<String, Integer> sortByValue(final Map<String, Integer> unsortMap) {
 
-		List<Map.Entry<String, Integer>> list = new LinkedList<Map.Entry<String, Integer>>(unsortMap.entrySet());
+		final List<Map.Entry<String, Integer>> list = new LinkedList<Map.Entry<String, Integer>>(unsortMap.entrySet());
 
 		Collections.sort(list, new Comparator<Map.Entry<String, Integer>>() {
-			public int compare(Map.Entry<String, Integer> o1, Map.Entry<String, Integer> o2) {
-				return (o1.getValue()).compareTo(o2.getValue());
+			/**
+			 * Method to compare two register of a Map
+			 */
+			public int compare(final Map.Entry<String, Integer> o1, final Map.Entry<String, Integer> o2) {
+				return o1.getValue().compareTo(o2.getValue());
 			}
 		});
 
-		Map<String, Integer> sortedMap = new LinkedHashMap<String, Integer>();
+		final Map<String, Integer> sortedMap = new LinkedHashMap<String, Integer>();
 
-		for (Map.Entry<String, Integer> entry : list) {
+		for (final Map.Entry<String, Integer> entry : list) {
 			sortedMap.put(entry.getKey(), entry.getValue());
 		}
 
 		return sortedMap;
 	}
-		
-	public static Entry<String, Integer> getEntryByIndex(Map<String, Integer> map, int index){
-		List<Entry<String, Integer>> entryList = new ArrayList<Map.Entry<String, Integer>>(map.entrySet());
+
+	/**
+	 * Method to return one register by index
+	 * 
+	 * @param map
+	 *            Map
+	 * @param index
+	 *            Index of map register
+	 * @return Value refers to index
+	 */
+	public static Entry<String, Integer> getEntryByIndex(final Map<String, Integer> map, final int index) {
+		final List<Entry<String, Integer>> entryList = new ArrayList<Map.Entry<String, Integer>>(map.entrySet());
 		return entryList.get(index);
 	}
-	
-	public static <K, V extends Comparable<? super V>> void clearMap(Map<K, V> map){
+
+	/**
+	 * Generic method to clear Maps
+	 * 
+	 * @param map
+	 */
+	public static <K, V extends Comparable<? super V>> void clearMap(final Map<K, V> map) {
 		if (map != null) {
 			map.clear();
 		}

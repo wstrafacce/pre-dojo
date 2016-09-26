@@ -1,19 +1,32 @@
 package br.com.cubotecnologia.enuns;
 
+/**
+ * 
+ * @author william.s.soares
+ * 
+ *         Enum to define Weapon Type
+ */
 public enum WeaponType {
 	FIRE(1), WHITE(2), UNKNOW(999);
 	
-	private int iWeaponTypeId;
+	/**
+	 * Weapon type id
+	 */
+	private transient final int iWeaponTypeId;
 
-	private WeaponType(int iWeaponTypeId) {
+	/**
+	 * Constructor
+	 * @param iWeaponTypeId Weapon type Id
+	 */
+	private WeaponType(final int iWeaponTypeId) {
 		this.iWeaponTypeId = iWeaponTypeId;
 	}
 
-	public int getiAwardTypeId() {
+	/**
+	 * Method to return Weapon type id
+	 * @return Weapon type id
+	 */
+	public int getWeaponTypeId() {
 		return iWeaponTypeId;
-	}
-
-	public void setiAwardTypeId(int iWeaponTypeId) {
-		this.iWeaponTypeId = iWeaponTypeId;
 	}
 }

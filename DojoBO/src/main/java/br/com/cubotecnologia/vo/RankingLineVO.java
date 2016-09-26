@@ -2,7 +2,7 @@ package br.com.cubotecnologia.vo;
 
 public class RankingLineVO {
 	private String sPlayerNickName;
-	private String sPlayerMurders;
+	private String sPlayerKillers;
 	private String sPlayerDeaths;
 	private String sStreak;
 	private String sFavoriteWeapon;
@@ -16,12 +16,12 @@ public class RankingLineVO {
 		this.sPlayerNickName = sPlayerNickName;
 	}
 
-	public String getPlayerMurders() {
-		return sPlayerMurders;
+	public String getPlayerKillers() {
+		return sPlayerKillers;
 	}
 
-	public void setPlayerMurders(String sPlayerMurders) {
-		this.sPlayerMurders = sPlayerMurders;
+	public void setPlayerKillers(String sPlayerKillers) {
+		this.sPlayerKillers = sPlayerKillers;
 	}
 
 	public String getPlayerDeaths() {

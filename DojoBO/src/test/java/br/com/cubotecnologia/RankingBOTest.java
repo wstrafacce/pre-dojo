@@ -6,6 +6,7 @@ import java.util.LinkedList;
 import java.util.List;
 import java.util.Map;
 
+import org.junit.Ignore;
 import org.junit.Test;
 
 import br.com.cubotecnologia.bo.ranking.IRankingBO;
@@ -49,10 +50,10 @@ public class RankingBOTest {
 	}
 	
 	private void compareAssert
-					(RankingLineVO rlvRankingLineVO, String sNickName, String sNumberOfMurders, 
+					(RankingLineVO rlvRankingLineVO, String sNickName, String sNumberOfKillers, 
 							String sNumeberOfDeaths, String sFavoriteWeapon) {
 		assertEquals(sNickName, rlvRankingLineVO.getPlayerNickName());
-		assertEquals(sNumberOfMurders, rlvRankingLineVO.getPlayerMurders());
+		assertEquals(sNumberOfKillers, rlvRankingLineVO.getPlayerKillers());
 		assertEquals(sNumeberOfDeaths, rlvRankingLineVO.getPlayerDeaths());
 		assertEquals(sFavoriteWeapon, rlvRankingLineVO.getFavoriteWeapon());
 	}

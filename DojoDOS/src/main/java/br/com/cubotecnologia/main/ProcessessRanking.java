@@ -10,6 +10,7 @@ import org.apache.commons.lang.StringUtils;
 import br.com.cubotecnologia.bo.ranking.IRankingBO;
 import br.com.cubotecnologia.bo.ranking.impl.RankingBO;
 import br.com.cubotecnologia.entities.players.IPlayer;
+import br.com.cubotecnologia.utils.DateUtil;
 import br.com.cubotecnologia.vo.RankingVO;
 import br.com.cubotecnologia.vo.RankingLineVO;
 
@@ -19,10 +20,10 @@ public class ProcessessRanking {
 		// TODO Auto-generated method stub
 		if (args.length == 0) {
 			args = new String[] { "dojo.log", "dojo2.log" };
+			System.out.println("File didn't informed! Will be showing results for standard log.");
 		}
 		
 		processesLog(args[0]);
-		processesLog(args[1]);
 
 	}
 
@@ -37,24 +38,40 @@ public class ProcessessRanking {
 
 			for (Map.Entry<String, RankingVO> entry : lRankings) {
 				RankingVO rkvRankingVO = entry.getValue();
-
-				System.out.println("Match: " + rkvRankingVO.getMatchId());
-				System.out.println("Started: " + rkvRankingVO.getStartedDate());
-				System.out.println("Ended: " + rkvRankingVO.getEndedDate());
-
+				System.out.println("============================================================================================");
+				System.out.println("||" + fixedLengthString("Match", 14) + "|" + fixedLengthString(rkvRankingVO.getMatchId(), 73) + "||");
+				System.out.println("||--------------|-------------------------------------------------------------------------||");
+				System.out.println("||" + fixedLengthString("Started", 14) + "|" + fixedLengthString(DateUtil.getDateFromString(rkvRankingVO.getStartedDate()).toString(), 73) + "||");
+				System.out.println("||--------------|-------------------------------------------------------------------------||");
+				System.out.println("||" + fixedLengthString("Ended", 14) + "|" + fixedLengthString(DateUtil.getDateFromString(rkvRankingVO.getEndedDate()).toString(), 73) + "||");
+				System.out.println("||========================================================================================||");
+				System.out.println("||" + fixedLengthString("Nickname", 13) + "||" + fixedLengthString("Killers", 13) + "||" + fixedLengthString("Deaths", 13)
+										+ "||" + fixedLengthString("Fav. Weapon", 13) + "||" + fixedLengthString("Streak", 13) + "||" + fixedLengthString("Award", 13) + "||");
+				System.out.println("||=============||=============||=============||=============||=============||=============||");
+				
+				int count = 1;
 				for (RankingLineVO rlvRankinLineVO : rkvRankingVO.getRankingLines()) {
-					System.out.println("Nickname: " + rlvRankinLineVO.getPlayerNickName());
-					System.out.println("Murders: " + rlvRankinLineVO.getPlayerMurders());
-					System.out.println("Deaths: " + rlvRankinLineVO.getPlayerDeaths());
-					System.out.println("Favorite Weapon: " + rlvRankinLineVO.getFavoriteWeapon());
+					if (count > 1) {
+						System.out.println("||-------------||-------------||-------------||-------------||-------------||-------------||");
+					}
+					
+					System.out.println("||" + fixedLengthString(rlvRankinLineVO.getPlayerNickName(), 13) + "||" + fixedLengthString(rlvRankinLineVO.getPlayerKillers(), 13) 
+											+ "||" + fixedLengthString(rlvRankinLineVO.getPlayerDeaths(), 13) + "||" + fixedLengthString(rlvRankinLineVO.getFavoriteWeapon(), 13) 
+											+ "||" + fixedLengthString(rlvRankinLineVO.getStreak(), 13) + "||" + fixedLengthString(rlvRankinLineVO.getAward(), 13) + "||");
+					
+					count++;				
 				}
-				System.out.println("==============================================================");
-
+				
+				System.out.println("============================================================================================\n");
 			}
 		} catch (Exception e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
+	}
+	
+	public static String fixedLengthString(String string, int length) {
+	    return String.format("%1$"+length+ "s", string);
 	}
 
 }

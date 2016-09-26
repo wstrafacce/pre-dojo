@@ -7,7 +7,7 @@ import java.util.Date;
 
 import org.junit.Test;
 
-import br.com.cubotecnologia.entities.murder.Murder;
+import br.com.cubotecnologia.entities.killer.Killer;
 import br.com.cubotecnologia.entities.players.impl.Player;
 import br.com.cubotecnologia.entities.weapons.impl.AK47;
 import br.com.cubotecnologia.entities.weapons.impl.AWeapon;
@@ -32,8 +32,8 @@ public class PlayerTest {
 				wpnWeapon = new M16();
 			}
 
-			Murder mrdMurder = new Murder(now, wpnWeapon);
-			plyPlayer.addMurder(mrdMurder);
+			Killer mrdKiller = new Killer(now, wpnWeapon);
+			plyPlayer.addKiller(mrdKiller);
 		}
 
 		String sFavoriteWeapon = plyPlayer.getFavoriteWeapon();
@@ -58,8 +58,8 @@ public class PlayerTest {
 				wpnWeapon = new M16();
 			}
 
-			Murder mrdMurder = new Murder(now, wpnWeapon);
-			plyPlayer.addMurder(mrdMurder);
+			Killer mrdKiller = new Killer(now, wpnWeapon);
+			plyPlayer.addKiller(mrdKiller);
 		}
 
 		String sFavoriteWeapon = plyPlayer.getFavoriteWeapon();
